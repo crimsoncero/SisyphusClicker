@@ -2,16 +2,17 @@ using UnityEngine;
 
 public class ClickCounter
 {
-    public uint Current { get; private set; }
-
+    public uint Count { get; private set; }
+    public bool IsInit { get; private set; } = false;
     public void Reset()
     {
-        Current = 0;
+        IsInit = true;
+        Count = 0;
     }
 
     public void Increase(uint amount)
     {
-        Current += amount;
+        Count += amount;
     }
 
 

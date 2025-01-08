@@ -3,16 +3,15 @@ using UnityEngine;
 
 public class MainMenu : Menu
 {
-    public event Action OnStart;
 
     [SerializeField] private OptionsMenu _options;
     [SerializeField] private CreditsMenu _credits;
 
+
     public void StartGame()
     {
-        OnStart?.Invoke();
-
         ToggleActive(false);
+        GameManager.Instance.StartGame();
     }
 
     public void OpenOptions()
