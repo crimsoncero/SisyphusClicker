@@ -2,7 +2,7 @@ using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameManager : MonoBehaviour, IDataPersistence
 {
     public event Action OnGameStart;
     public event Action OnGameEnd;
@@ -38,17 +38,11 @@ public class GameManager : MonoBehaviour
     public void NewGame()
     {
         _clickCounter.Reset();
+        DataPersistenceManager.Instance.NewGame();
     }
 
     public void StartGame()
     {
-        // if new game:
-        if(!_clickCounter.IsInit)
-        {
-            NewGame();
-        }
-
-
         _clicker.enabled = true;
 
         OnGameStart?.Invoke();
@@ -67,5 +61,14 @@ public class GameManager : MonoBehaviour
 
         Debug.Log($"Current Counter: {_clickCounter.Count}");
     }
-    
+
+    public void LoadData(GameData data)
+    {
+        _clickCounter.SetCounter(data.ClickCount);
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.ClickCount = _clickCounter.Count;
+    }
 }

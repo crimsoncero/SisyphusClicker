@@ -36,4 +36,9 @@ public class OptionsMenu : Menu
             _sfxToggle.Toggle(false);
         }
     }
+
+    public void ResetGame()
+    {
+        GameManager.Instance.NewGame();
+    }
 }

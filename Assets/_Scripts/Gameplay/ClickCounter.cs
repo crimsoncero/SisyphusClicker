@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ClickCounter
+public class ClickCounter 
 {
     public uint Count { get; private set; }
     public bool IsInit { get; private set; } = false;
@@ -15,5 +15,8 @@ public class ClickCounter
         Count += amount;
     }
 
-
+    public void SetCounter(uint amount)
+    {
+        Count = amount;
+    }
 }
