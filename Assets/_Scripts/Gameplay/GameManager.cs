@@ -6,14 +6,17 @@ public class GameManager : MonoBehaviour, IDataPersistence
 {
     public event Action OnGameStart;
     public event Action OnGameEnd;
-
-
+    public event Action OnHeightChanged
+    {
+        add { _clickCounter.OnCounterChanged += value; }
+        remove { _clickCounter.OnCounterChanged -= value; }
+    }
     [SerializeField] 
     private Clicker _clicker;
     private ClickCounter _clickCounter;
 
     public static GameManager Instance { get; private set; }
-
+    public uint Height { get { return _clickCounter.Count * 10; } }
 
     public void Awake()
     {
