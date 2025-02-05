@@ -1,3 +1,4 @@
+using Lofelt.NiceVibrations;
 using TMPro;
 using UnityEngine;
 

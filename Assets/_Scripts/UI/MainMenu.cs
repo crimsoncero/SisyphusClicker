@@ -9,6 +9,7 @@ public class MainMenu : Menu
 
     public void StartGame()
     {
+        ButtonVibrate();
         ToggleActive(false);
         GameManager.Instance.StartGame();
         GameUI.Instance.gameObject.SetActive(true);
@@ -16,11 +17,13 @@ public class MainMenu : Menu
 
     public void OpenOptions()
     {
+        ButtonVibrate();
         OpenSubMenu(_options);
     }
 
     public void OpenCredits()
     {
+        ButtonVibrate();
         OpenSubMenu(_credits);
     }
 }

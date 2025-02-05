@@ -684,18 +684,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 733140384}
-        m_TargetAssemblyTypeName: Lofelt.NiceVibrations.HapticSource, Lofelt.NiceVibrations
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &431725728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1382,71 +1370,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 641071300}
   m_CullTransparentMesh: 1
---- !u!1 &733140382
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 733140385}
-  - component: {fileID: 733140384}
-  - component: {fileID: 733140383}
-  m_Layer: 0
-  m_Name: Rumble
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &733140383
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 733140382}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb29a83998eb4949bc0a9c8e5662fa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _outputLevel: 1
-  _hapticsEnabled: 1
---- !u!114 &733140384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 733140382}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d20df93fb7de8457baa15a213a53ab19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clip: {fileID: -8404250095460277587, guid: 0ec40230bd576417ea32eaa2f8f784e2, type: 3}
-  priority: 128
-  _fallbackPreset: 2
-  _loop: 0
-  _level: 1
-  _frequencyShift: 0
---- !u!4 &733140385
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 733140382}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 89.48042, y: -173.06299, z: -3.5011458}
-  m_LocalScale: {x: 0.81249994, y: 0.81249994, z: 0.81249994}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2047839648}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &806665572
 GameObject:
   m_ObjectHideFlags: 0
@@ -1532,18 +1455,6 @@ MonoBehaviour:
       - m_Target: {fileID: 1524035327}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: OpenOptions
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 733140384}
-        m_TargetAssemblyTypeName: Lofelt.NiceVibrations.HapticSource, Lofelt.NiceVibrations
-        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2473,18 +2384,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 733140384}
-        m_TargetAssemblyTypeName: Lofelt.NiceVibrations.HapticSource, Lofelt.NiceVibrations
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1654042120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3349,7 +3248,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 733140385}
   - {fileID: 641071301}
   - {fileID: 1524035326}
   - {fileID: 1164125410}
