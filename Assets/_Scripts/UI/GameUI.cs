@@ -1,11 +1,11 @@
-using Lofelt.NiceVibrations;
+using MoreMountains.Tools;
 using TMPro;
 using UnityEngine;
 
 public class GameUI : Singleton<GameUI>
 {
     [SerializeField] private TMP_Text _heightText;
-
+    [SerializeField] private MMProgressBar _heightBar;
     private void Start()
     {
         gameObject.SetActive(false);
@@ -23,7 +23,9 @@ public class GameUI : Singleton<GameUI>
     }
     public void UpdateHeightUI()
     {
-        Debug.Log("Updated Height Text");
         _heightText.text = GameManager.Instance.Height.ToString() + " cm";
+
+        _heightBar.UpdateBar(GameManager.Instance.GetMilestoneProgress(), 0, 1);
     }
+
 }
