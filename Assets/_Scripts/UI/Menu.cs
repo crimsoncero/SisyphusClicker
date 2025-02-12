@@ -1,7 +1,7 @@
 using System;
 using Unity.VisualScripting;
 using UnityEngine;
-
+using Lofelt.NiceVibrations;
 public class Menu : MonoBehaviour
 {
     [SerializeField] private Menu _parentMenu;
@@ -30,6 +30,9 @@ public class Menu : MonoBehaviour
         ToggleActive(false);
     }
 
-
+    protected void ButtonVibrate()
+    {
+        HapticPatterns.PlayPreset(HapticPatterns.PresetType.Warning);
+    }   
     
 }
