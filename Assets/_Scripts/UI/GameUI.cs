@@ -8,7 +8,7 @@ public class GameUI : Singleton<GameUI>
     [SerializeField] private MMProgressBar _heightBar;
     private void Start()
     {
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
     }
 
     private void OnEnable()
