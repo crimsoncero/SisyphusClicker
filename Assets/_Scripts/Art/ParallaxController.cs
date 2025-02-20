@@ -15,15 +15,19 @@ public class ParallaxController : MonoBehaviour
     private void OnEnable()
     {
         if (GameManager.Instance != null)
+        {
             GameManager.Instance.OnHeightChanged += MoveGround;
+        }
         else
+        {
             StartCoroutine(AssignToGameManager());
+        }
     }
 
     private IEnumerator AssignToGameManager()
     {
         yield return new WaitForEndOfFrame();
-            GameManager.Instance.OnHeightChanged += MoveGround;
+        GameManager.Instance.OnHeightChanged += MoveGround;
     }
 
     private void OnDisable()
@@ -43,7 +47,6 @@ public class ParallaxController : MonoBehaviour
 
     public void MoveGround()
     {
-        Debug.Log("asd");
         ground.transform.position = new Vector3(ground.transform.position.x - groundSpeed, ground.transform.position.y, ground.transform.position.z);
     }
 }
